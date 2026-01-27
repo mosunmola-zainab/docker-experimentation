@@ -99,7 +99,7 @@ SQL queries to identify NULL values and invalid location IDs.
 ### pgAdmin Integration
 Web-based database management for easy data exploration.
 
-## 📈 SQL Analytics Examples
+## SQL Analytics Examples
 
 **Count trips by day:**
 ```sql
