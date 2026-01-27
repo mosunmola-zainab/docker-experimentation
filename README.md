@@ -2,7 +2,7 @@
 
 A containerized data ingestion pipeline built with Docker, PostgreSQL, and Python for processing large-scale NYC taxi trip data.
 
-## 🎯 Project Overview
+## Project Overview
 
 This project demonstrates end-to-end data engineering skills including:
 - Docker containerization
@@ -11,7 +11,7 @@ This project demonstrates end-to-end data engineering skills including:
 - SQL analytics and data quality checks
 - Infrastructure as code with Docker Compose
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Python 3.13** - Data processing
 - **PostgreSQL 18** - Database
@@ -21,14 +21,14 @@ This project demonstrates end-to-end data engineering skills including:
 - **pgAdmin** - Database management UI
 - **uv** - Python package manager
 
-## 📊 Dataset
+## Dataset
 
 - **Source**: NYC Taxi & Limousine Commission (TLC)
 - **Records**: 1.3+ million taxi trips
 - **Period**: January 2021
 - **Size**: ~180MB compressed
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 
@@ -73,7 +73,7 @@ docker run -it \
 uv run python load_zones.py
 ```
 
-## 📁 Project Structure
+## Project Structure
 ```
 pipeline/
 ├── docker-compose.yaml    # Multi-container orchestration
@@ -85,7 +85,7 @@ pipeline/
 └── README.md            # This file
 ```
 
-## 🔍 Key Features
+## Key Features
 
 ### Chunked Data Processing
 Handles large files efficiently by processing in 100k row chunks to avoid memory issues.
@@ -121,7 +121,7 @@ JOIN zones z ON t."PULocationID" = z."LocationID"
 LIMIT 100;
 ```
 
-## 🧹 Cleanup
+## Cleanup
 
 **Stop containers (keep data):**
 ```bash
@@ -134,7 +134,7 @@ docker-compose down
 docker system prune -a --volumes
 ```
 
-## 📚 Learning Outcomes
+## Learning Outcomes
 
 - Containerization best practices
 - Large-scale data ingestion
@@ -143,15 +143,15 @@ docker system prune -a --volumes
 - Infrastructure as Code (IaC)
 - Data quality assessment
 
-## 👤 Author
+## Author
 
 **Zainab Hassan**
 - Focus: Data Engineering & MLOps
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 Built as part of the [DataTalks.Club Data Engineering Zoomcamp](https://github.com/DataTalksClub/data-engineering-zoomcamp)
 
-## 📝 License
+## License
 
 This project is open source and available under the MIT License.
