@@ -11,12 +11,13 @@ WORKDIR /app
 ENV PATH="/app/.venv/bin:$PATH"
 
 # Copy dependency files first (better layer caching)
-COPY "pyproject.toml" "uv.lock" ".python-version" ./
+COPY pyproject.toml uv.lock .python-version ./
+
 # Install dependencies from lock file (ensures reproducible builds)
 RUN uv sync --locked
 
-# Copy application code
-COPY pipeline.py pipeline.py
+# Copy ingestion script
+COPY ingest_data.py .
 
-# Set entry point
-ENTRYPOINT ["python", "pipeline.py"]
+# Set entry point to run ingestion script
+ENTRYPOINT ["uv", "run", "python", "ingest_data.py"]
