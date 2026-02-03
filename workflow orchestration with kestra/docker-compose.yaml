@@ -85,7 +85,6 @@ services:
           url: http://localhost:8082/
     ports:
       - "8082:8080"
-      - "8081:8081"
     depends_on:
       kestra_postgres:
         condition: service_started
